@@ -12,8 +12,7 @@ A clean, modern mobile application for online grocery shopping built with **Flut
 
 | Login Screen | Sign Up Screen |
 | :---: | :---: |
-| <img src="screenshots/login.png" width="250" alt="Login Screen"/> | <img src="screenshots/signup.png" width="250" alt="Sign Up Screen"/> |
-
+| <img src="groceries_app/screenshots/login.png" width="250" alt="Login Screen"/> | <img src="groceries_app/screenshots/signup.png" width="250" alt="Sign Up Screen"/> |
 ---
 
 ## ✨ Features
