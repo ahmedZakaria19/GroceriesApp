@@ -34,15 +34,3 @@ A clean, modern mobile application for online grocery shopping built with **Flut
 
 ---
 
-## 📂 Project Structure
-
-```text
-lib/
-├── core/
-│   ├── constants/      # App colors, text styles, and asset paths
-│   └── widgets/        # Reusable custom buttons and text fields
-├── features/
-│   └── auth/
-│       ├── screens/    # Login and Sign Up screens
-│       └── widgets/    # Auth-specific UI components
-└── main.dart           # Application entry point
