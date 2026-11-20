@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'GroceriesApp.dart';
+import 'groceries_app.dart';
 void main() {
   runApp(GroceriesApp());
 }

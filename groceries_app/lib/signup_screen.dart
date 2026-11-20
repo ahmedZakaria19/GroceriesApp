@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app/widgets/app_form_field.dart';
+
+import 'package:groceries_app/widgets/app_button.dart';
 
 class SignupScreen extends StatefulWidget {
   const new({super.key});
@@ -49,18 +52,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               SizedBox(height: 10),
 
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Your Name",
-                  hintStyle: TextStyle(fontWeight: FontWeight(300)),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                ),
-              ),
+              AppFormField(hintText: "Your Name"),
               SizedBox(height: 20),
 
               Text(
@@ -72,20 +64,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               SizedBox(height: 10),
 
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: "example@gmail.com",
-                  hintStyle: TextStyle(fontWeight: FontWeight(300)),
-
-                  suffixIcon: Icon(Icons.check, color: Color(0xFF53B175)),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                ),
-              ),
+              AppFormField(hintText: "example@gmail.com"),
               SizedBox(height: 30),
 
               Text(
@@ -97,22 +76,10 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               SizedBox(height: 10),
 
-              TextFormField(
+              AppFormField(
+                hintText: "***********",
                 obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "***********",
-                  hintStyle: TextStyle(fontWeight: FontWeight(300)),
-                  suffixIcon: Icon(
-                    Icons.visibility_off,
-                    color: Color(0xFF7C7C7C),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                ),
+                icon: Icon(Icons.visibility_off, color: Color(0xFF7C7C7C)),
               ),
               SizedBox(height: 30),
 
@@ -146,24 +113,7 @@ class _SignupScreenState extends State<SignupScreen> {
               ),
               SizedBox(height: 30),
 
-              Container(
-                width: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 24.5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(19),
-                  color: Color(0xFF53B175),
-                ),
-                child: Center(
-                  child: Text(
-                    "Sing Up",
-                    style: TextStyle(
-                      fontWeight: FontWeight(600),
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
+              AppButton(text: "Signup"),
               SizedBox(height: 25),
 
               Row(

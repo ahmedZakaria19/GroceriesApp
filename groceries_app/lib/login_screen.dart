@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/app_button.dart';
+
 class LoginScreen extends StatefulWidget {
   const new({super.key});
 
@@ -81,7 +83,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 obscureText: true,
                 decoration: InputDecoration(
                   hintText: "*********",
-
                   hintStyle: TextStyle(fontWeight: FontWeight(300)),
                   suffixIcon: Icon(
                     Icons.visibility_off,
@@ -109,24 +110,7 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 30),
 
-              Container(
-                width: double.infinity,
-                decoration: BoxDecoration(
-                  color: Color(0xFF53B175),
-                  borderRadius: BorderRadius.circular(19),
-                ),
-                padding: EdgeInsets.symmetric(vertical: 24.5),
-                child: Center(
-                  child: Text(
-                    "Log In",
-                    style: TextStyle(
-                      fontWeight: FontWeight(600),
-                      fontSize: 18,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ),
+              AppButton(text: "Log In"),
               SizedBox(height: 25),
 
               Row(
