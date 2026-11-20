@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/app_button.dart';
+import 'package:groceries_app/widgets/app_button.dart';
+import 'package:groceries_app/widgets/app_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
   const new({super.key});
@@ -33,7 +34,6 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 15),
-
               Text(
                 "Enter your emails and password",
                 style: TextStyle(
@@ -53,20 +53,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 10),
-
-              TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Example@gmail.com",
-                  hintStyle: TextStyle(fontWeight: FontWeight(300)),
-
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                ),
-              ),
+              AppFormField(hintText: "Example@gmail.com"),
               SizedBox(height: 30),
 
               Text(
@@ -78,23 +65,10 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               SizedBox(height: 10),
-
-              TextFormField(
+              AppFormField(
+                hintText: "***********",
                 obscureText: true,
-                decoration: InputDecoration(
-                  hintText: "*********",
-                  hintStyle: TextStyle(fontWeight: FontWeight(300)),
-                  suffixIcon: Icon(
-                    Icons.visibility_off,
-                    color: Color(0xFF7C7C7C),
-                  ),
-                  enabledBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                  focusedBorder: UnderlineInputBorder(
-                    borderSide: BorderSide(color: Color(0xFFE2E2E2)),
-                  ),
-                ),
+                icon: Icon(Icons.visibility_off, color: Color(0xFF7C7C7C)),
               ),
               SizedBox(height: 20),
 
