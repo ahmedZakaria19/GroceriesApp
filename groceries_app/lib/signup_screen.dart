@@ -51,9 +51,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
               SizedBox(height: 10),
-
               AppFormField(hintText: "Your Name"),
               SizedBox(height: 20),
+
 
               Text(
                 "Email",
@@ -63,9 +63,9 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
               SizedBox(height: 10),
-
               AppFormField(hintText: "example@gmail.com"),
               SizedBox(height: 30),
+
 
               Text(
                 "Password",
@@ -75,7 +75,6 @@ class _SignupScreenState extends State<SignupScreen> {
                 ),
               ),
               SizedBox(height: 10),
-
               AppFormField(
                 hintText: "***********",
                 obscureText: true,
