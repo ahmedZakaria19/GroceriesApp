@@ -11,6 +11,7 @@ class AppFormField extends StatelessWidget {
   final String hintText;
   final bool obscureText;
   final Icon? icon;
+  
   @override
   Widget build(BuildContext context) {
     return TextFormField(
