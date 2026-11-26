@@ -11,8 +11,7 @@ class BottomNavBarScreen extends StatefulWidget {
 }
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
-  @override
-  int cuurent_index = 0;
+  int cuurentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
     LoginScreen(),
@@ -20,16 +19,17 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
     LoginScreen(),
     AccountScreen(),
   ];
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[cuurent_index],
+      body: screens[cuurentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {
-            cuurent_index = index;
+            cuurentIndex = index;
           });
         },
-        currentIndex: cuurent_index,
+        currentIndex: cuurentIndex,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Color(0xFF53B175),
         unselectedItemColor: Color(0xFF181725),

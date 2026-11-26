@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:groceries_app/bottom_nav_bar_screen.dart';
+import 'package:groceries_app/home_screen.dart';
 
 import 'package:groceries_app/widgets/app_button.dart';
 import 'package:groceries_app/widgets/app_form_field.dart';
@@ -84,7 +86,17 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               SizedBox(height: 30),
 
-              AppButton(text: "Log In"),
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BottomNavBarScreen(),
+                    ),
+                  );
+                },
+                child: AppButton(text: "Log In"),
+              ),
               SizedBox(height: 25),
 
               Row(
