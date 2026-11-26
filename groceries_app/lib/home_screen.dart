@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:groceries_app/widgets/app_home_row.dart';
 import 'package:groceries_app/widgets/app_product_horizontal_list.dart';
 import 'package:groceries_app/widgets/app_proudct_card.dart';
-import 'package:groceries_app/widgets/app_search_Field.dart';
+import 'package:groceries_app/widgets/app_search_field.dart';
 
 class HomeScreen extends StatefulWidget {
   const new({super.key});

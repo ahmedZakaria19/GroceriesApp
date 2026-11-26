@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app/account_screen.dart';
+import 'package:groceries_app/explore_screen.dart';
 import 'package:groceries_app/home_screen.dart';
 import 'package:groceries_app/login_screen.dart';
 
 class BottomNavBarScreen extends StatefulWidget {
-  const new({super.key});
+  const BottomNavBarScreen({super.key});
 
   @override
   State<BottomNavBarScreen> createState() => _BottomNavBarScreenState();
@@ -14,7 +15,7 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   int cuurentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
-    LoginScreen(),
+    ExploreScreen(),
     LoginScreen(),
     LoginScreen(),
     AccountScreen(),
