@@ -64,7 +64,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     crossAxisCount: 2,
                     mainAxisSpacing: 15,
                     crossAxisSpacing: 15,
-                    childAspectRatio: 0.95,
+                    childAspectRatio: 0.80,
                   ),
                   itemCount: products.length,
                   itemBuilder: (context, index) => products[index],
