@@ -12,7 +12,7 @@ class BottomNavBarScreen extends StatefulWidget {
 }
 
 class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
-  int cuurentIndex = 0;
+  int currentIndex = 0;
   List<Widget> screens = [
     HomeScreen(),
     ExploreScreen(),
@@ -23,14 +23,14 @@ class _BottomNavBarScreenState extends State<BottomNavBarScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: screens[cuurentIndex],
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {
-            cuurentIndex = index;
+            currentIndex = index;
           });
         },
-        currentIndex: cuurentIndex,
+        currentIndex: currentIndex,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Color(0xFF53B175),
         unselectedItemColor: Color(0xFF181725),

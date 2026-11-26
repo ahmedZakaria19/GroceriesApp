@@ -11,7 +11,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
   List<ProductItem> products = [
     ProductItem(
       imagePath: 'assets/Fruits.png',
-      text: 'Frash Fruits\n& Vegetable',
+      text: 'Fresh Fruits\n& Vegetable',
       bgcolor: Color(0x1A53B175),
     ),
     ProductItem(
@@ -66,7 +66,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     crossAxisSpacing: 15,
                     childAspectRatio: 0.95,
                   ),
-                  itemCount: 6,
+                  itemCount: products.length,
                   itemBuilder: (context, index) => products[index],
                 ),
               ),

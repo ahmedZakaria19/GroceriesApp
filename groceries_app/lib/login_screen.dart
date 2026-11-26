@@ -86,7 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
               InkWell(
                 onTap: () {
-                  Navigator.push(
+                  Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(
                       builder: (context) => BottomNavBarScreen(),
@@ -105,7 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(fontWeight: FontWeight(600)),
                   ),
                   Text(
-                    "Singup ",
+                    "Sing up ",
                     style: TextStyle(
                       fontWeight: FontWeight(600),
                       color: Color(0xFF53B175),

@@ -50,7 +50,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 Divider(),
 
                 SizedBox(height: 10),
-                AccountRow(text: "Promo Cord", iconData: Icons.sell_outlined),
+                AccountRow(text: "Promo Code", iconData: Icons.sell_outlined),
                 SizedBox(height: 10),
                 Divider(),
 
@@ -73,7 +73,7 @@ class _AccountScreenState extends State<AccountScreen> {
                 Divider(),
 
                 SizedBox(height: 30),
-                AcountButton(),
+                AccountButton(),
               ],
             ),
           ),
@@ -83,14 +83,8 @@ class _AccountScreenState extends State<AccountScreen> {
   }
 }
 
-
-
-
-
 class AccountHeader extends StatelessWidget {
-  const new({
-    super.key,
-  });
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -119,11 +113,7 @@ class AccountHeader extends StatelessWidget {
                     ),
                   ),
                   SizedBox(width: 10),
-                  Icon(
-                    Icons.edit,
-                    color: Color(0xFF53B175),
-                    size: 15,
-                  ),
+                  Icon(Icons.edit, color: Color(0xFF53B175), size: 15),
                 ],
               ),
               Text(
@@ -138,11 +128,8 @@ class AccountHeader extends StatelessWidget {
   }
 }
 
-
-class AcountButton extends StatelessWidget {
-  const new({
-    super.key,
-  });
+class AccountButton extends StatelessWidget {
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -155,15 +142,18 @@ class AcountButton extends StatelessWidget {
       ),
       child: Row(
         children: [
-          
           Icon(Icons.logout, color: Color(0xFF53B175)),
-          SizedBox(width: 100),
-          Text(
-            "Logout",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight(600),
-              color: Color(0xFF53B175),
+          // SizedBox(width: 100),
+          Expanded(
+            child: Center(
+              child: Text(
+                "Logout",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight(600),
+                  color: Color(0xFF53B175),
+                ),
+              ),
             ),
           ),
         ],
@@ -171,7 +161,6 @@ class AcountButton extends StatelessWidget {
     );
   }
 }
-
 
 class AccountRow extends StatelessWidget {
   const AccountRow({super.key, required this.text, required this.iconData});
