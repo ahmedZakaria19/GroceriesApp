@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AccountScreen extends StatefulWidget {
+class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
 
   @override
-  State<AccountScreen> createState() => _AccountScreenState();
-}
-
-class _AccountScreenState extends State<AccountScreen> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
+      body: SafeArea(
+        child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: Column(
@@ -84,14 +79,14 @@ class _AccountScreenState extends State<AccountScreen> {
 }
 
 class AccountHeader extends StatelessWidget {
-  const new({super.key});
+  const AccountHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         CircleAvatar(
-          backgroundImage: AssetImage('assets/profile.png'),
+          backgroundImage: AssetImage('assets/account/profile.png'),
           radius: 30,
         ),
         SizedBox(width: 20),
@@ -129,8 +124,7 @@ class AccountHeader extends StatelessWidget {
 }
 
 class AccountButton extends StatelessWidget {
-  const new({super.key});
-
+  const AccountButton({super.key});
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 class ProductCard extends StatelessWidget {
   const ProductCard({
     super.key,
-    required this.image,
+    required this.imagePath,
     required this.mainText,
     required this.secondaryText,
     required this.price,
   });
-  final Image image;
+  final String imagePath;
   final String mainText;
   final String secondaryText;
   final double price;
@@ -27,9 +27,11 @@ class ProductCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Center(child: image),
+          Center(child: Image.asset(imagePath, width: 100, height: 70)),
           Text(
             mainText,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis ,
             style: TextStyle(
               fontSize: 16,
               color: Color(0xFF181725),
@@ -37,7 +39,7 @@ class ProductCard extends StatelessWidget {
             ),
           ),
 
-          Text(secondaryText, style: TextStyle(color: Color(0xFF7C7C7C))),
+          Text(secondaryText,maxLines: 1,overflow: TextOverflow.ellipsis ,style: TextStyle(color: Color(0xFF7C7C7C))),
 
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

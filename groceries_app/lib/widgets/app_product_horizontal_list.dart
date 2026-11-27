@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groceries_app/widgets/app_proudct_card.dart';
+import 'package:groceries_app/widgets/app_product_card.dart';
 
 class ProductsHorizontalList extends StatelessWidget {
   const ProductsHorizontalList({super.key, required this.products});

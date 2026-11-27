@@ -3,14 +3,9 @@ import 'package:groceries_app/widgets/app_form_field.dart';
 
 import 'package:groceries_app/widgets/app_button.dart';
 
-class SignupScreen extends StatefulWidget {
-  const new({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
-  @override
-  State<SignupScreen> createState() => _SignupScreenState();
-}
-
-class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +15,7 @@ class _SignupScreenState extends State<SignupScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(child: Image.asset('assets/carrot.png')),
+              Center(child: Image.asset('assets/common/carrot.png')),
               SizedBox(height: 30),
 
               Text(
@@ -123,7 +118,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     style: TextStyle(fontWeight: FontWeight(600)),
                   ),
                   Text(
-                    "Signup",
+                    "Login",
                     style: TextStyle(
                       fontWeight: FontWeight(600),
                       color: Color(0xFF53B175),

@@ -3,14 +3,9 @@ import 'package:groceries_app/bottom_nav_bar_screen.dart';
 import 'package:groceries_app/widgets/app_button.dart';
 import 'package:groceries_app/widgets/app_form_field.dart';
 
-class LoginScreen extends StatefulWidget {
-  const new({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
-  @override
-  State<LoginScreen> createState() => _LoginScreenState();
-}
-
-class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +16,7 @@ class _LoginScreenState extends State<LoginScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Center(
-                child: Image.asset('assets/carrot.png', width: 47, height: 55),
+                child: Image.asset('assets/common/carrot.png', width: 47, height: 55),
               ),
               SizedBox(height: 100),
 
@@ -105,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     style: TextStyle(fontWeight: FontWeight(600)),
                   ),
                   Text(
-                    "Sing up ",
+                    "Sign up ",
                     style: TextStyle(
                       fontWeight: FontWeight(600),
                       color: Color(0xFF53B175),

@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:groceries_app/widgets/app_home_row.dart';
 import 'package:groceries_app/widgets/app_product_horizontal_list.dart';
-import 'package:groceries_app/widgets/app_proudct_card.dart';
+import 'package:groceries_app/widgets/app_product_card.dart';
 import 'package:groceries_app/widgets/app_search_field.dart';
 
-class HomeScreen extends StatefulWidget {
-  const new({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
+  static const List<GroceryCategoryCard> _groceries = [
+    GroceryCategoryCard(
+      title: 'Pulses',
+      imagePath: 'assets/home/pulses.png',
+      backgroundColor: Color(0xFFFEF2E4),
+    ),
+    GroceryCategoryCard(
+      title: 'Rice',
+      imagePath: 'assets/home/rice.png',
+      backgroundColor: Color(0xFFE5F4EA),
+    ),
+  ];
 
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
           padding: EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
-              Image.asset('assets/carrot.png', width: 20, height: 23),
+              Image.asset('assets/common/carrot.png', width: 20, height: 23),
               SizedBox(height: 9),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -47,33 +55,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ProductsHorizontalList(
                 products: [
                   ProductCard(
-                    image: Image.asset(
-                      'assets/banana.png',
-                      width: 100,
-                      height: 70,
-                    ),
+                    imagePath: 'assets/home/banana.png',
                     mainText: 'Organic Bananas',
-                    secondaryText: '7pcs, Priceg',
+                    secondaryText: '7pcs, Price',
                     price: 4.99,
                   ),
                   ProductCard(
-                    image: Image.asset(
-                      'assets/apple.png',
-                      width: 100,
-                      height: 70,
-                    ),
+                    imagePath: 'assets/home/apple.png',
                     mainText: 'Red Apple',
-                    secondaryText: '1kg, Priceg',
+                    secondaryText: '1kg, Price',
                     price: 4.99,
                   ),
                   ProductCard(
-                    image: Image.asset(
-                      'assets/carrot.png',
-                      width: 100,
-                      height: 70,
-                    ),
+                    imagePath: 'assets/common/carrot.png',
                     mainText: 'carrot',
-                    secondaryText: '1kg, Priceg',
+                    secondaryText: '1kg, Price',
                     price: 4.99,
                   ),
                 ],
@@ -86,33 +82,21 @@ class _HomeScreenState extends State<HomeScreen> {
               ProductsHorizontalList(
                 products: [
                   ProductCard(
-                    image: Image.asset(
-                      'assets/pepper.png',
-                      width: 100,
-                      height: 70,
-                    ),
+                    imagePath: 'assets/home/pepper.png',
                     mainText: "Red pepper",
-                    secondaryText: "1kg, Priceg",
+                    secondaryText: "1kg, Price",
                     price: 4.99,
                   ),
                   ProductCard(
-                    image: Image.asset(
-                      'assets/ginger.png',
-                      width: 100,
-                      height: 70,
-                    ),
+                    imagePath: 'assets/home/ginger.png',
                     mainText: "Organic ginger",
-                    secondaryText: "1kg, Priceg",
+                    secondaryText: "1kg, Price",
                     price: 4.99,
                   ),
                   ProductCard(
-                    image: Image.asset(
-                      'assets/carrot.png',
-                      width: 100,
-                      height: 70,
-                    ),
+                    imagePath: 'assets/common/carrot.png',
                     mainText: 'carrot',
-                    secondaryText: '1kg, Priceg',
+                    secondaryText: '1kg, Price',
                     price: 4.99,
                   ),
                 ],
@@ -126,70 +110,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 100,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, i) {
-                    return i == 0
-                        ? Container(
-                            width: 250,
-                            padding: EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFFEF2E4),
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Image.asset('assets/pulses.png'),
-                                SizedBox(width: 15),
-                                Text(
-                                  "Pulses",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight(600),
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        : Container(
-                            width: 250,
-                            padding: EdgeInsets.all(15),
-                            decoration: BoxDecoration(
-                              color: Color(0xFFE5F4EA),
-                              borderRadius: BorderRadius.circular(18),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Image.asset('assets/rice.png'),
-                                SizedBox(width: 15),
-                                Text(
-                                  "Rice",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight(600),
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          );
-                  },
-                  separatorBuilder: (context, index) => SizedBox(width: 15),
-                  itemCount: 2,
+                  itemBuilder: (context, i) => _groceries[i],
+                  separatorBuilder: (context, index) =>
+                      const SizedBox(width: 15),
+                  itemCount: _groceries.length,
                 ),
               ),
               SizedBox(height: 20),
               ProductsHorizontalList(
                 products: [
                   ProductCard(
-                    image: Image.asset('assets/beef.png'),
-                    mainText: "Broiler Chicken",
-                    secondaryText: "1kg, Priceg",
+                    imagePath: 'assets/home/beef.png',
+                    mainText: "Beef Bone",
+
+                    secondaryText: "1kg, Price",
                     price: 4.99,
                   ),
                   ProductCard(
-                    image: Image.asset('assets/chicken.png'),
-                    mainText: "Beef Bone",
-                    secondaryText: "1kg, Priceg",
+                    imagePath: 'assets/home/chicken.png',
+                    mainText: "Broiler Chicken",
+                    secondaryText: "1kg, Price",
                     price: 4.99,
                   ),
                 ],
@@ -197,6 +137,41 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class GroceryCategoryCard extends StatelessWidget {
+  const GroceryCategoryCard({
+    super.key,
+    required this.title,
+    required this.imagePath,
+    required this.backgroundColor,
+  });
+
+  final String title;
+  final String imagePath;
+  final Color backgroundColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 250,
+      padding: const EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: backgroundColor,
+        borderRadius: BorderRadius.circular(18),
+      ),
+      child: Row(
+        children: [
+          Image.asset(imagePath),
+          const SizedBox(width: 15),
+          Text(
+            title,
+            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 20),
+          ),
+        ],
       ),
     );
   }
