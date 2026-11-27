@@ -14,9 +14,9 @@ A clean, modern mobile application for online grocery shopping built with **Flut
 | :---: | :---: | :---: |
 | <img src="groceries_app/screenshots/login.png" width="230" alt="Login Screen"/> | <img src="groceries_app/screenshots/signup.png" width="230" alt="Sign Up Screen"/> | <img src="groceries_app/screenshots/home.png" width="230" alt="Home Screen"/> |
 
-| Explore Screen | Account Screen |
-| :---: | :---: |
-| <img src="groceries_app/screenshots/explore.png" width="230" alt="Explore Screen"/> | <img src="groceries_app/screenshots/account.png" width="230" alt="Account Screen"/> |
+| Explore Screen | Beverages Screen | Account Screen |
+| :---: | :---: | :---: |
+| <img src="groceries_app/screenshots/explore.png" width="230" alt="Explore Screen"/> | <img src="groceries_app/screenshots/beverages.png" width="230" alt="Beverages Screen"/> | <img src="groceries_app/screenshots/account.png" width="230" alt="Account Screen"/> |
 
 ---
 
@@ -30,7 +30,9 @@ A clean, modern mobile application for online grocery shopping built with **Flut
   - **Product Carousels:** Horizontal scrollable sections for **Exclusive Offer** and **Best Selling** items using custom reusable `ProductCard` widgets.
   - **Grocery Categories:** Highlighted category cards (such as *Pulses* and *Rice*) alongside meat and poultry listings.
 - **Explore (`Find Products`):**
-  - Product search bar and a 2-column category grid (*Fresh Fruits & Vegetable*, *Cooking Oil & Ghee*, *Meat & Fish*, *Bakery & Snacks*, *Dairy & Eggs*, and *Beverages*) with color-tinted cards.
+  - Product search bar and a 2-column category grid (*Fresh Fruits & Vegetable*, *Cooking Oil & Ghee*, *Meat & Fish*, *Bakery & Snacks*, *Dairy & Eggs*, and *Beverages*) with color-tinted cards and category navigation.
+- **Beverages Screen:**
+  - Dedicated 2-column product grid accessible from **Explore → Beverages**, showcasing drinks (*Diet Coke*, *Sprite Can*, *Apple & Grape Juice*, *Orange Juice*, *Coca Cola Can*, *Pepsi Can*) with prices and add-to-cart buttons.
 - **Account & Profile:**
   - Profile header with avatar, user name, email, and edit icon.
   - Account menu options (*Orders*, *My Details*, *Delivery Address*, *Payment Methods*, *Promo Code*, *Notifications*, *Help*, *About*) and a **Logout** button.
@@ -50,16 +52,23 @@ A clean, modern mobile application for online grocery shopping built with **Flut
 
 ```text
 groceries_app/
-├── assets/                 # Product & category images
+├── assets/                       # Categorized product, category, & icon images
+│   ├── account/
+│   ├── beverages/
+│   ├── common/
+│   ├── explore/
+│   ├── home/
+│   └── icons/
 ├── lib/
-│   ├── widgets/            # Reusable custom UI components
+│   ├── widgets/                  # Reusable custom UI components
 │   │   ├── app_button.dart
 │   │   ├── app_form_field.dart
 │   │   ├── app_home_row.dart
+│   │   ├── app_product_card.dart
 │   │   ├── app_product_horizontal_list.dart
-│   │   ├── app_proudct_card.dart
-│   │   └── app_search_Field.dart
+│   │   └── app_search_field.dart
 │   ├── account_screen.dart       # User profile & account settings screen
+│   ├── beverages_screen.dart     # Beverages category product grid screen
 │   ├── bottom_nav_bar_screen.dart # 5-tab bottom navigation wrapper
 │   ├── explore_screen.dart       # Product categories & search screen
 │   ├── groceries_app.dart        # Root MaterialApp widget
@@ -67,4 +76,5 @@ groceries_app/
 │   ├── login_screen.dart         # User login screen
 │   ├── main.dart                 # Application entry point
 │   └── signup_screen.dart        # User registration screen
-└── screenshots/            # App UI screenshots
+└── screenshots/                  # App UI screenshots
+```
